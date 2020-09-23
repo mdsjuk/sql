@@ -232,7 +232,6 @@ clientPort=2181
 
 ## 三、项目地址
 
-[springboot-dubbo-demo](https://github.com/Baijq/SpringBootDemo/tree/master/springboot-dubbo)
 
 ## 注意点和问题
 
