@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/dubbo-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/dubbo-provider/pom.xml" />
         <option value="$PROJECT_DIR$/dubbo-provider-002/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-provider-003/pom.xml" />
       </list>
     </option>
   </component>

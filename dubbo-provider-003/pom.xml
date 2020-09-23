@@ -29,7 +29,7 @@
     <version>0.1.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>dubbo-provider-002</name>
+    <name>dubbo-provider-003</name>
     <description>Differential privacy for SQL queries</description>
     <url>https://github.com/uber/sql-differential-privacy</url>
 
@@ -301,7 +301,7 @@
             </plugin>
 
         </plugins>
-        <finalName>sql-provider</finalName>
+        <finalName>sql-provider-003</finalName>
     </build>
 
     <profiles>
