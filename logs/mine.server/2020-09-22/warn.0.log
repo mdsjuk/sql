@@ -1,0 +1,56 @@
+[WARN ] 2020-09-22 10:51:16 [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+[WARN ] 2020-09-22 10:54:34 [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+[WARN ] 2020-09-22 10:54:49 [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+[WARN ] 2020-09-22 10:58:25 [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+[WARN ] 2020-09-22 10:58:32 [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+[WARN ] 2020-09-22 11:04:59 [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+[WARN ] 2020-09-22 14:32:44 [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception thrown from ApplicationListener handling ContextClosedEvent
+java.lang.NullPointerException: null
+	at org.apache.dubbo.config.bootstrap.DubboBootstrap.unexportMetadataService(DubboBootstrap.java:857)
+	at org.apache.dubbo.config.bootstrap.DubboBootstrap.destroy(DubboBootstrap.java:996)
+	at org.apache.dubbo.config.bootstrap.DubboBootstrap.stop(DubboBootstrap.java:776)
+	at org.apache.dubbo.config.spring.context.DubboBootstrapApplicationListener.onContextClosedEvent(DubboBootstrapApplicationListener.java:56)
+	at org.apache.dubbo.config.spring.context.DubboBootstrapApplicationListener.onApplicationContextEvent(DubboBootstrapApplicationListener.java:47)
+	at org.apache.dubbo.config.spring.context.OneTimeExecutionApplicationContextEventListener.onApplicationEvent(OneTimeExecutionApplicationContextEventListener.java:40)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1012)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at restsparketl.ProviderRestsparketlApplication.main(ProviderRestsparketlApplication.java:14)
+[WARN ] 2020-09-22 14:39:28 [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entryController': Injection of @Reference dependencies is failed; nested exception is java.lang.IllegalStateException: Failed to check the status of the service com.dubbo.service.RW. No provider available for the service com.dubbo.service.RW from the url zookeeper://127.0.0.1:2181/org.apache.dubbo.registry.RegistryService?anyhost=true&application=user-consumer&check=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&init=false&interface=com.dubbo.service.RW&methods=RW&pid=3084&qos.enable=false&register.ip=192.168.204.1&release=2.7.5&remote.application=user-provider&side=consumer&sticky=false&timestamp=1600756780890 to the consumer 192.168.204.1 use dubbo version 2.7.5
+[WARN ] 2020-09-22 14:39:28 [main] o.a.c.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+[WARN ] 2020-09-22 17:01:40 [main-SendThread(127.0.0.1:2181)] org.apache.zookeeper.ClientCnxn - Session 0x10009cd29aa0011 for server 127.0.0.1/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:68)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:366)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1145)
+[WARN ] 2020-09-22 17:01:08 [main-SendThread(127.0.0.1:2181)] org.apache.zookeeper.ClientCnxn - Session 0x10009cd29aa0010 for server 127.0.0.1/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:68)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:366)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1145)
+[WARN ] 2020-09-22 17:08:26 [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entryController': Injection of @Reference dependencies is failed; nested exception is java.lang.IllegalStateException: zookeeper not connected
+[WARN ] 2020-09-22 17:08:26 [main] o.a.c.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
